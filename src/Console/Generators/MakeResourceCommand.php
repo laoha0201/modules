@@ -4,31 +4,31 @@ namespace Caffeinated\Modules\Console\Generators;
 
 use Caffeinated\Modules\Console\GeneratorCommand;
 
-class MakeRequestCommand extends GeneratorCommand
+class MakeResourceCommand extends GeneratorCommand
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'make:module:request
+    protected $signature = 'make:module:resource
     	{slug : The slug of the module.}
-    	{name : The name of the form request class.}
-    	{--location= : The modules location to create the module form request class in}';
+    	{name : The name of the form resource class.}
+    	{--location= : The modules location to create the module form resource class in}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Create a new module form request class';
+    protected $description = 'Create a new module form resource class';
 
     /**
      * String to store the command type.
      *
      * @var string
      */
-    protected $type = 'Module request';
+    protected $type = 'Module resource';
 
     /**
      * Get the stub file for the generator.
@@ -38,7 +38,7 @@ class MakeRequestCommand extends GeneratorCommand
     protected function getStub()
     {
         $stub_path = config('modules.stubs') ?: __DIR__ . '/stubs';
-		return $stub_path .'/stubs/request.stub';
+		return $stub_path .'/stubs/resource.stub';
     }
 
     /**
@@ -50,6 +50,6 @@ class MakeRequestCommand extends GeneratorCommand
      */
     protected function getDefaultNamespace($rootNamespace)
     {
-        return module_class($this->argument('slug'), 'Http\\Requests', $this->option('location'));
+        return module_class($this->argument('slug'), 'Http\\Resources', $this->option('location'));
     }
 }

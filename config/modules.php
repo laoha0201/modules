@@ -80,4 +80,8 @@ return [
     'drivers' => [
         'local' => 'Caffeinated\Modules\Repositories\LocalRepository',
     ],
+
+
+	//'stubs' => base_path() . '/vendor/nwidart/laravel-modules/src/Commands/stubs',
+	'stubs' => base_path() . '/app/stubs',
 ];

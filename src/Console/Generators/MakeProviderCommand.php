@@ -37,7 +37,8 @@ class MakeProviderCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__.'/stubs/provider.stub';
+        $stub_path = config('modules.stubs') ?: __DIR__ . '/stubs';
+		return $stub_path .'/stubs/provider.stub';
     }
 
     /**

@@ -60,7 +60,8 @@ class MakeModelCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__ . '/stubs/model.stub';
+        $stub_path = config('modules.stubs') ?: __DIR__ . '/stubs';
+		return $stub_path . '/stubs/model.stub';
     }
 
     /**

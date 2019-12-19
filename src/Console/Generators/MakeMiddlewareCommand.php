@@ -37,7 +37,8 @@ class MakeMiddlewareCommand extends GeneratorCommand
      */
     protected function getStub()
     {
-        return __DIR__.'/stubs/middleware.stub';
+        $stub_path = config('modules.stubs') ?: __DIR__ . '/stubs';
+		return $stub_path .'/stubs/middleware.stub';
     }
 
     /**
