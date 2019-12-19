@@ -1,3 +1,19 @@
+## 安装方法
+
+composer.json文件中
+```
+"repositories": [
+    {
+        "type": "vcs",
+        "url": "https://github.com/laoha0201/modules"
+    }
+],
+
+"require": {
+    "caffeinated/modules": "dev-master"
+},
+```
+
 # Caffeinated Modules
 [![Source](https://img.shields.io/badge/source-caffeinated/modules-blue.svg?style=flat-square)](https://github.com/caffeinated/modules)
 [![Latest Stable Version](https://poser.pugx.org/caffeinated/modules/v/stable?format=flat-square)](https://packagist.org/packages/caffeinated/modules)
